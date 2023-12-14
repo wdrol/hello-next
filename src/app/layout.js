@@ -2,12 +2,17 @@ import React from 'react';
 
 import './styles.css';
 
-function RootLayout({ children }) {
+function RootLayout({ children })
+{
+  const timestamp = new Date().toLocaleString();
+
   return (
     <html lang="en">
       <body>
         {children}
-
+        <footer>
+          <h3>Server time is { timestamp }.</h3>
+        </footer>
       </body>
     </html>
   );
